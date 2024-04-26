@@ -1,0 +1,293 @@
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+    border-bottom: 1px solid black;
+    display: flex;
+    /* display: inline-block; */
+    /* box-shadow: 30px 30px 30px -10px rgba(0,0,0,0.15),
+    inset -1px -1px 15px rgba(0,0,0,0.5 ),
+    -15px -15px 35px rgba(255,255,255,0); */
+}
+
+.row{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.row .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    padding: 0px;
+}
+
+.row .col:nth-child(1), .row .col:nth-child(4){
+    flex-basis: 70px;    
+}
+
+.logo_hcmute{
+    width: 50px;
+    height: 60px;
+    background-color: white;
+    background-image: url(hcmute.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.logo_feee{
+    width: 60px;
+    height: 50px;
+    background-color: white;
+    background-image: url(feee.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.container{
+    width: 100%;
+    height: 90%;
+    /* padding: 60px 10px; */
+    /* margin: 40px auto 0px; */
+    display: grid;
+    gap: 0rem;
+    grid-template-columns: 30% 70%;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+}
+
+.container .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-basis: 30%; */
+    padding: 5px;
+}
+
+#map {
+    width: 96%;
+    height: 98%;
+    position: relative;
+    border-radius: 40px;
+    border: 20px solid black;
+}
+
+.ecu {
+    width: 97%;
+    height: 98%;
+    position: relative;
+    /* border: 1px solid black; */
+    display: grid;
+    /* gap: 2rem; */
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    /* background-color: white; */
+    border-radius: 20px;
+}
+
+.speedometer{
+    width: 400px;
+    height: 400px;  
+    border: 2px solid white;
+    border-radius: 50%;
+    background-image: url("speedometer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 30px 30px 30px -20px rgba(255, 255, 255, 0.15);
+}
+
+.speedometer .speedometer--needle{
+    width: 50%;
+    height: 126.4px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    top: 18%;
+    /* left: 50%; */
+    z-index: 111;
+    transform-origin: bottom;
+    transform: rotate(-160deg);
+    transition: 1s;
+    clip-path: polygon(49% 0, 51% 0, 53% 100%, 47% 100%); 
+}
+
+.speed--fill{
+    position: absolute;
+    width: 184px;
+    height: 184px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    z-index: 121;
+}
+
+.time{
+    position: absolute;
+    width: 96px;
+    height: 40px;
+    color: white;
+    font-size: 5rem;
+    z-index: 122;
+    display: flex;
+    flex-direction: row;
+    font-family: 'DS-Digital', sans-serif;
+    justify-content: center;
+}
+
+.text--speed{
+    position: absolute;    
+    width: 120px;
+    height: 40px;
+    /* border: 1px solid white; */
+    bottom: 120px;
+    left: 138.4px;
+    padding: 4px 1.4px;
+    /* border-radius: 5px; */
+    border-top: 1px solid white;
+    /* background-color: #20526d;
+    box-shadow: inset 0px 0px 10px 0px #fff; */
+    z-index: 122;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: 2rem;                                          
+}
+
+.text--speed .km{    
+    font-family: 'DS-Digital', sans-serif; 
+    font-size: 4.5rem; 
+    margin-right: 4px; 
+}
+
+.gear_temp-fuel{
+    display: flex;
+}
+
+.gear{
+    width: 200px;
+    height: 200px;  
+    border: 2px solid white;
+    border-radius: 50%;
+    background-image: url("rpm.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    /* box-shadow: 30px 30px 30px -20px rgba(255, 255, 255, 0.15); */
+    margin-right: 15px;
+}
+
+.gear .gear--needle{
+    width: 50%;
+    height: 75px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: white;
+    position: absolute;
+    top: 13%;
+    /* left: 49.4%; */
+    z-index: 111;
+    transform-origin: bottom;
+    /* transform: rotate(-180deg); DCNN:7.2deg */
+    transform: rotate(3turn);
+    transition: 1s;
+    clip-path: polygon(49% 0, 51% 0, 53% 100%, 47% 100%);
+}
+
+.temp-fuel{
+    width: 200px;
+    height: 200px;  
+    border: 2px solid white;
+    border-radius: 50%;
+    background-image: url("fuel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    /* box-shadow: 30px 30px 30px -20px rgba(255, 255, 255, 0.15); */
+    margin-left: 15px;
+}
+
+.icon-signal{
+    width: 75%;
+    position: absolute;
+    bottom: 45%;
+    display: flex;
+    justify-content: space-between;
+    /* color: white; */
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 99999;
+}
+
+.icon-signal .fi, .icon-signal .fa-solid{
+    color: white;
+}
+
+.temp-fuel .temp--needle{
+    width: 50%;
+    height: 80.5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    top: 9.5%;
+    /* left: 50%; */
+    z-index: 111;
+    transform-origin: bottom;
+    transform: rotate(0.68turn);/*0.68 - 0.816 */
+    transition: 1s;
+    clip-path: polygon(49% 0, 51% 0, 53% 100%, 47% 100%); 
+}
+
+.temp-fuel .fuel--needle{
+    width: 50%;
+    height: 80.5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    top: 9.5%;
+    /* left: 50%; */
+    z-index: 111;
+    transform-origin: bottom;
+    transform: rotate(0.32turn);/*0.32 - 0.1825 */
+    transition: 1s;
+    clip-path: polygon(49% 0, 51% 0, 53% 100%, 47% 100%); 
+}
+
+.temp-fuel--fill{
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    background-color: black;
+    z-index: 121;
+    left: 31%;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 97%;
+        grid-template-columns: 1fr;
+    }
+}

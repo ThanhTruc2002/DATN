@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="./style_copy.css">
+    <link rel="stylesheet" href="./base.css">
+    <link href="./font/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
+    <link href="./uicons-solid-straight/css/uicons-solid-straight.css" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+      <div class="row">            
+          <div class="col">
+              <div class="logo_hcmute"></div>
+          </div>
+          <div class="col">
+              <p>Nguyen Hoang Thanh Truc 20161069</p>
+          </div>
+          <div class="col">      
+              <p>Le Van Tien 20161378</p>
+          </div>
+          <div class="col">
+              <div class="logo_feee"></div>
+          </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="ecu">        
+        <div class="col speedometer">
+          <span id="speedvalue"></span>
+          <div class="speedometer--needle"></div>
+          <div class="speed--fill"></div>
+          <div class="time">
+              <span id="hh">00</span>
+              <span>:</span>
+              <span id="mm">00</span>
+              <span>:</span>
+              <span id="sc">00</span>
+          </div>
+          <div class="text--speed">
+              <span class="km">0</span>
+              <span class="unit">km/h</span>
+          </div>
+        </div>
+        <div class="col gear_temp-fuel">
+          <div class="col gear">
+            <span id="rpmvalue"></span>
+            <div class="gear--needle">
+            </div>
+          </div>
+          
+          <div class="col temp-fuel">
+            <div class="icon-signal">
+                <i class="fi fi-ss-oil-temp"></i>
+                <i class="fa-solid fa-gas-pump"></i>
+            </div>
+            <span id="tempvalue"></span>           
+            <div class="temp--needle"></div>
+            <span id="fuelvalue"></span>
+            <div class="fuel--needle"></div>
+            <div class="temp-fuel--fill"></div>
+          </div>
+        </div>
+          
+      </div>
+      <div id="map" class="col"></div>
+    </div>
+    
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCi0C0a8fX7EjvMgd6mcvjhs4bn8equOI"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdWLV6Y1wfnqzykyVHd40L7b_dpotXYyA"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script type="module" src="function.js"></script>
+  </body>

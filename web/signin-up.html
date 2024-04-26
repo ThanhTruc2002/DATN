@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map | Sign in</title>
+    <link rel="stylesheet" href="./style_signin-up.css">
+    <link rel="stylesheet" href="./base.css">
+    <link href="./font/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
+    <link href="./uicons-solid-straight/css/uicons-solid-straight.css" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ds-digital?styles=17998,17999" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="row">            
+            <div class="col logo">
+                <div class="logo_hcmute"></div>
+            </div>
+            <div class="col date-time">
+              <div class="time">
+                <span id="hh">00</span>
+                <span>:</span>
+                <span id="mm">00</span>
+                <span>:</span>
+                <span id="sc">00</span>
+              </div>
+              <div class="date">
+                <p>Friday | April 19th, 2024</p>
+              </div>
+            </div>
+            <div class="col nofi">      
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </div>
+            <div class="col logo">
+                <div class="logo_bosch"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <div class="infield">
+                    <input type="text" placeholder="User Name" id="username" required/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email" id="email" required/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" id="password" required/>
+                    <label></label>
+                </div>
+                <!-- <div class="infield">
+                    <input type="password" placeholder="Confirm Password" />
+                    <label></label>
+                </div> -->
+                <button id="signup" type="signup">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email" id="email-signin" required/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" id="password-signin" required/>
+                    <label></label>
+                </div>
+                <a href="#" class="forgot">Forgot your password?</a>
+                <button id="signin" type="signin">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button>Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button>Sign Up</button>
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+    
+    <!-- js code -->
+    <script src="calendar.js"></script> 
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>  -->
+    
+    <script type="module" src="sign_up.js" defer></script>
+    <script type="module" src="sign_in.js" defer></script>
+    <script>
+        const container = document.getElementById('container');
+        const overlayCon = document.getElementById('overlayCon');
+        const overlayBtn = document.getElementById('overlayBtn');
+
+        overlayBtn.addEventListener('click', ()=> {
+            container.classList.toggle('right-panel-active');
+
+            overlayBtn.classList.remove('btnScale');
+            window.requestAnimationFrame( ()=> {
+                overlayBtn.classList.add('btnScale');
+            })
+        })
+    </script>
+</body>
+</html>

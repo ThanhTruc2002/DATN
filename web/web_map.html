@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style_7inch.css">
+  <link rel="stylesheet" href="./base.css">
+  <link href="./font/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
+  <link href="./uicons-solid-straight/css/uicons-solid-straight.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/ds-digital?styles=17998,17999" rel="stylesheet">
+</head>
+
+<body>
+  <div class="content">
+    <header>
+      <div class="row">
+        <div class="col logo">
+          <div class="logo_hcmute"></div>
+        </div>
+        <div class="col date-time">
+          <div class="time">
+            <span id="hh">00</span>
+            <span>:</span>
+            <span id="mm">00</span>
+            <span>:</span>
+            <span id="sc">00</span>
+          </div>
+          <div class="date">
+            <p>Friday | April 19th, 2024</p>
+          </div>
+        </div>
+        <!-- <div class="col nofi">
+          <i class="fa-solid fa-bell"></i>
+        </div> -->
+        <div class="col user">  
+          <div id="userName">User Name</div>     
+          <div class="account"></div>             
+        </div>
+        <div class="col logo">
+          <div class="logo_bosch"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="taskbar">
+        <a href="#" class="taskbar_icon">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <a href="index.html" class="taskbar_icon active">
+          <i class="fa-solid fa-house-signal"></i>
+        </a>
+        <a href="todolist.html" class="taskbar_icon">
+          <i class="fa-solid fa-gear"></i>
+        </a>
+        <a href="signin-up.html" class="taskbar_icon">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+      </aside>
+      <div class="ecu">
+        <div class="info-car"></div>
+        <div class="parameter">
+          <div class="gear_temp-fuel">
+            <div class="col temp">
+              <!-- <div class="progress">
+                  <div class="bar-temp"></div>
+                </div> -->
+              <div class="temp--needle"></div>
+              <div class="temp--fill">
+                <div class="text--temp">
+                  <span id="tempvalue"></span>
+                  <span class="unit">°C</span>
+                </div>
+              </div>
+              <!-- <div class="icon-signal">
+                  <i class="fi fi-ss-oil-temp"></i>
+                </div> -->
+            </div>
+            <div class="col gear">
+              <!-- <span id="rpmvalue"></span> -->
+              <!-- <div class="progress">
+                  <div class="bar-gear"></div>
+                </div>                 -->
+              <div class="rpm--fill">
+                <div class="text--rpm">
+                  <span id="rpmvalue"></span>
+                  <span class="unit">x1000r/min</span>
+                </div>
+              </div>
+              <div class="gear--needle">
+              </div>
+            </div>
+
+            <div class="col fuel">
+
+              <div class="fuel--fill">
+                <div class="text--fuel">
+                  <span id="fuelvalue"></span>
+                  <span class="unit">%</span>
+                </div>
+              </div>
+              <div class="fuel--needle"></div>
+              <div class="icon-signal">
+                <i class="fa-solid fa-gas-pump"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col speedometer">
+
+            <div class="speedometer--needle"></div>
+            <!-- <div class="fuel--needle"></div> -->
+            <div class="speed--fill">
+              <div class="text--speed">
+                <span id="speedvalue"></span>
+                <span class="unit">km/h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="map" class="col"></div>
+    </div>
+  </div>
+
+
+
+  <script src="calendar.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCi0C0a8fX7EjvMgd6mcvjhs4bn8equOI"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdWLV6Y1wfnqzykyVHd40L7b_dpotXYyA"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script type="module" src="function.js"></script>
+  <script type="module" src="info.js"></script>
+
+</body>
