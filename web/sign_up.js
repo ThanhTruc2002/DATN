@@ -40,7 +40,7 @@ signup.addEventListener('click', function (event) {
             // //set user data to database
             // database_ref.child('/users' + username).set(user_data)
             alert("Sign Up...")
-            window.location.href = "web_map.html";
+            window.location.href = "signin-up.html";
             // ...
         })
         .catch((error) => {
@@ -55,7 +55,11 @@ signup.addEventListener('click', function (event) {
         const uid = user.uid;
         set(ref(db, 'users/' + uid), {
             email: email,
-            username: username
+            username: username,
+            speedometer: 0,
+            rpm: 0,
+            fuel: 0,
+            temp: 0
         })
     })
 })
