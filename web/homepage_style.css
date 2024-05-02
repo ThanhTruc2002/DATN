@@ -1,0 +1,198 @@
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+.content {
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    align-content: center;
+    position: relative;
+}
+
+
+header{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: black;
+    background-color: white;
+    border-bottom: 1px solid black;
+    display: flex;
+    position: relative;
+    /* display: inline-block; */
+    /* box-shadow: 30px 30px 30px -10px rgba(0,0,0,0.15),
+    inset -1px -1px 15px rgba(0,0,0,0.5 ),
+    -15px -15px 35px rgba(255,255,255,0); */
+}
+
+.row{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.row .col{
+    flex-basis: 40%;
+    padding: 0px;
+}
+
+.date-time{
+    position: relative;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-content: center;
+    justify-content: start;
+    justify-items: start;
+    align-items: center;
+}
+
+.time{    
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.time span{
+    /* color: white; */
+    font-size: 3.5rem !important;
+    z-index: 122;
+    /* font-family: 'DS-Digital', sans-serif; */
+    font-weight: 550 !important;
+}
+
+.date{
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start ; */
+    font-size: 1.5rem;
+}
+
+.nofi{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end ;
+    font-size: 2rem;
+}
+
+.nofi i{
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.row .col:nth-child(1), .row .col:nth-child(4){
+    flex-basis: 70px;
+}
+
+.logo_hcmute{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    background-image: url(hcmute.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 20px;
+}
+
+.logo_bosch{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    background-image: url(bosch.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 20px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* padding: 60px 10px; */
+    /* margin: 40px auto 0px; */
+    display: grid;
+    gap: 0rem;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    /* background-color: black; */
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#map {
+    width: 97%;
+    height: 98%;
+    position: relative;
+    border-radius: 40px;
+    border: 15px solid #383838;
+}
+
+#legend {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #000;
+    position: fixed;
+    right: 2%;
+    bottom: 18%;
+    font-size: 1.3rem;
+    height: auto;
+    width: 120px;
+}
+
+#legend h3 {
+    margin-top: 0;
+}
+
+#legend p {
+    color:black;
+}
+
+.legend-color {
+    opacity: 1;
+    width: 15px;
+    height: 12px;
+    display: inline-block;
+    border: 1px solid grey;
+    margin-right: 5px;
+}
+
+.good {
+    background: yellowgreen;
+}
+
+.fair {
+    background: yellow;
+}
+
+.poor {
+    background: red;
+}
+
+.pothole {
+    background: black;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
