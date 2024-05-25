@@ -1,0 +1,89 @@
+body {
+    height: 100%;
+    margin: 0px;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content {
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 100%;
+    align-content: center;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* padding: 60px 10px; */
+    /* margin: 40px auto 0px; */
+    display: grid;
+    gap: 0rem;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    /* background-color: black; */
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* border-radius: 40px;
+    border: 15px solid #383838; */
+}
+
+#legend {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #000;
+    position: fixed;
+    right: 2%;
+    bottom: 18%;
+    font-size: 1.3rem;
+    height: auto;
+    width: 120px;
+}
+
+#legend h3 {
+    margin-top: 0;
+}
+
+#legend p {
+    color:black;
+}
+
+.legend-color {
+    opacity: 1;
+    width: 15px;
+    height: 12px;
+    display: inline-block;
+    border: 1px solid grey;
+    margin-right: 5px;
+}
+
+.good {
+    background: yellowgreen;
+}
+
+.fair {
+    background: yellow;
+}
+
+.poor {
+    background: red;
+}
+
+.pothole {
+    background: black;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}

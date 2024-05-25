@@ -182,14 +182,14 @@ header {
     justify-content: center;
     justify-items: center;
     /* flex-basis: 30%; */
-    padding: 5px;
+    padding: 0.5rem;
 
 }
 
 .taskbar {
     position: relative;
     height: 70vh;
-    width: 50px;
+    width: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,11 +203,11 @@ header {
 .taskbar .taskbar_icon {
     font-size: 2.3rem;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     color: gray;
     padding: 0px;
-    margin: 20px 0;
+    margin: 2rem 0;
     border-radius: 50%;
     /* height: 5rem; */
     display: flex;
@@ -231,8 +231,8 @@ a {
     border-radius: 50%;
     /* margin-right: 2px; */
     font-size: 2.7rem;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,21 +252,21 @@ a {
     width: 97%;
     height: 98%;
     position: relative;
-    border-radius: 40px;
-    border: 15px solid #383838;
+    border-radius: 4rem;
+    border: 1.5rem solid #383838;
 }
 
 #legend {
     background: #fff;
-    padding: 10px;
-    margin: 10px;
-    border: 3px solid #000;
+    padding: 1rem;
+    margin: 1rem;
+    border: 0.3rem solid #000;
     position: fixed;
     right: 2%;
     bottom: 18%;
     font-size: 1.3rem;
     height: auto;
-    width: 120px;
+    width: 12rem;
 }
 
 #legend h3 {
@@ -279,11 +279,11 @@ a {
 
 .legend-color {
     opacity: 1;
-    width: 15px;
-    height: 12px;
+    width: 1.5rem;
+    height: 1.2rem;
     display: inline-block;
-    border: 1px solid grey;
-    margin-right: 5px;
+    border: .1rem solid grey;
+    margin-right: .5rem;
 }
 
 .good {
@@ -300,8 +300,8 @@ a {
 
 .pothole {
     background: black;
-    width: 12px;
-    height: 12px;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50%;
 }
 
@@ -319,7 +319,7 @@ a {
     justify-content: center;
     align-content: center;
     background-color: #383838;
-    border-radius: 40px;
+    border-radius: 4rem;
     /* border: 15px solid black; */
 }
 
@@ -348,16 +348,16 @@ a {
 }
 
 .speedometer {
-    width: 295px;
-    height: 295px;
-    border: 2px solid white;
+    width: 29.5rem;
+    height: 29.5rem;
+    border: 0.2rem solid white;
     border-radius: 50%;
     background-image: url("speedometer.png");
     /* background-image: url("speedometer1.png"); */
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
-    box-shadow: 30px 30px 30px -20px rgba(255, 255, 255, 0.15);
+    box-shadow: 3rem 3rem 3rem -2rem rgba(255, 255, 255, 0.15);
 }
 
 .speedometer .speedometer--needle {
@@ -671,8 +671,8 @@ a {
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 #toast {
     position: fixed;
-    top: 90px;
-    left: 32px;
+    top: 9.0rem;
+    left: 3.2rem;
     z-index: 9999999;
 }
 
@@ -680,12 +680,12 @@ a {
     display: flex;
     align-items: center;
     background-color: white;
-    border-radius: 2px;
-    padding: 5px 0px;
-    min-width: 200px;
-    max-width: 250px;
-    border-left: 4px solid;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    border-radius: .2rem;
+    padding: .5rem .0rem;
+    min-width: 20.0rem;
+    max-width: 25.0rem;
+    border-left: .4rem solid;
+    box-shadow: 0 .5rem .8rem rgba(0, 0, 0, 0.08);
     transition: all linear 0.3s;
 }
 
@@ -708,11 +708,11 @@ a {
 }
 
 .toast+.toast {
-    margin-top: 20px;
+    margin-top: 2.0rem;
 }
 
 .toast__icon {
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 
@@ -727,7 +727,7 @@ a {
 
 .toast__icon,
 .toast__close {
-    padding: 0 15px;
+    padding: 0 1.5rem;
 }
 
 .toast__body {
@@ -736,20 +736,20 @@ a {
 }
 
 .toast__title {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 600;
     color: black;
 }
 
 .toast__msg {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #888;
-    margin-top: 6px;
+    margin-top: .6rem;
     line-height: 1.5;
 }
 
 .toast__close {
-    font-size: 24px;
+    font-size: 2.4rem;
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }

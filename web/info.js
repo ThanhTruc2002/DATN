@@ -145,7 +145,7 @@ onAuthStateChanged(auth, (user) => {
         updateUserParameter(user);
     } else {
         alert("Create Account & Sign in");
-        window.location.href = "sign_up.html";
+        window.location.href = "signin-up.html";
     }
 });
 

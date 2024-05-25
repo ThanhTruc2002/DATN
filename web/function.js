@@ -58,20 +58,20 @@ function processFirebaseData(snapshot, processData) {
   processData(data);
 }
 
-firebase.database().ref("/data2/Pothole").on("value", function (snapshot) {
+firebase.database().ref("/map/Pothole").on("value", function (snapshot) {
   processFirebaseData(snapshot, processPotholeData);
 });
 
-firebase.database().ref("/data2/IRI").on("value", function (snapshot) {
+firebase.database().ref("/map/IRI").on("value", function (snapshot) {
   processFirebaseData(snapshot, processIRIData);
 });
 
 var thresholds = [
-  [10, [[17.99, "yellowgreen"], [32.32, "yellow"], [Infinity, "red"]]],
-  [20, [[8.99, "yellowgreen"], [16.16, "yellow"], [Infinity, "red"]]],
-  [30, [[5.99, "yellowgreen"], [10.8, "yellow"], [Infinity, "red"]]],
-  [40, [[4.49, "yellowgreen"], [8.08, "yellow"], [Infinity, "red"]]],
-  [50, [[3.59, "yellowgreen"], [6.25, "yellow"], [Infinity, "red"]]]
+  [5, [[17.99, "yellowgreen"], [32.32, "yellow"], [Infinity, "red"]]],
+  [10, [[8.99, "yellowgreen"], [16.16, "yellow"], [Infinity, "red"]]],
+  [20, [[5.99, "yellowgreen"], [10.8, "yellow"], [Infinity, "red"]]],
+  [30, [[4.49, "yellowgreen"], [8.08, "yellow"], [Infinity, "red"]]],
+  [40, [[3.59, "yellowgreen"], [6.25, "yellow"], [Infinity, "red"]]]
 ];
 
 function get_color(v, I) {
